@@ -3,6 +3,16 @@
 All notable changes in this project will be documented in this file.
 
 
+## [1.1.0](https://github.com/omnixys/context/compare/v1.0.1...v1.1.0) (2026-03-11)
+
+### Ci
+
+* **Ci:** update ci Jobs ([](https://github.com/omnixys/context/commit/1a5b289a92f4e41d140afc0afb0179eda34b5209))
+
+### Type
+
+* **Type:** remove .d.ts exports ([](https://github.com/omnixys/context/commit/ccb712a28e803dafcdb404d292b85e39fb1374f2))
+
 ## [1.0.1](https://github.com/omnixys/context/compare/v1.0.0...v1.0.1) (2026-03-11)
 
 ### Publish
