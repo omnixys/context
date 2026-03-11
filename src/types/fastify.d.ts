@@ -1,5 +1,5 @@
 import 'fastify';
-import type { KeycloakRawOutput } from '../dto/kc-rwa.dto.js';
+import type { KeycloakRawOutput } from '@omnixys/contracts';
 
 export interface AuthUser {
   id: string;
