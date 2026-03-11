@@ -21,7 +21,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.build.json",
+    "build": "tsc -p tsconfig.json",
     "clean": "rimraf dist",
     "dev": "tsc -w",
     "release": "semantic-release",
