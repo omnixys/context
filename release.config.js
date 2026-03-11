@@ -15,6 +15,7 @@
  *
  * For more information, visit <https://www.gnu.org/licenses/>.
  */
+/** biome-ignore-all lint/suspicious/noTemplateCurlyInString: in use */
 
 /**
  * Semantic Release configuration for Omnixys microservices.
@@ -83,7 +84,7 @@ export default {
           commitGroupsSort: 'title',
           commitsSort: ['type', 'scope', 'subject'],
 
-          transform(commit, context) {
+          transform(commit) {
             const issues =
               commit.references?.map((ref) => `#${ref.issue}`) ?? [];
 
