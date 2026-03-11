@@ -3,6 +3,12 @@
 All notable changes in this project will be documented in this file.
 
 
+## [1.1.1](https://github.com/omnixys/context/compare/v1.1.0...v1.1.1) (2026-03-11)
+
+### Ci
+
+* **Ci:** Update publish-package.yml ([](https://github.com/omnixys/context/commit/ecc0448fedc6c87c6c37bf8886d3e7aff31285af))
+
 ## [1.1.0](https://github.com/omnixys/context/compare/v1.0.1...v1.1.0) (2026-03-11)
 
 ### Ci
