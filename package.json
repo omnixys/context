@@ -1,0 +1,57 @@
+{
+  "name": "@omnixys/context",
+  "version": "0.1.0",
+  "description": "Shared request context utilities and decorators for Omnixys NestJS microservices.",
+  "license": "GPL-3.0-or-later",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "rimraf dist",
+    "dev": "tsc -w",
+    "release": "semantic-release",
+    "lint": "biome lint",
+    "format": "biome format --write",
+    "lint:fix": "biome lint . --write",
+    "check": "biome check .",
+    "check:fix": "biome check . --write"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^10.0.0 || ^11.0.0",
+    "@nestjs/graphql": "^13.0.0",
+    "fastify": "^5.0.0"
+  },
+  "dependencies": {
+    "geoip-lite": "^1.4.10",
+    "ua-parser-js": "^1.0.38"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.6",
+    "@commitlint/cli": "^20.4.3",
+    "@commitlint/config-conventional": "^20.4.3",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^12.0.6",
+    "@semantic-release/npm": "^13.1.5",
+    "@semantic-release/release-notes-generator": "^14.1.0",
+    "lint-staged": "^16.3.3",
+    "semantic-release": "^25.0.3",
+    "typescript": "latest"
+  }
+}
