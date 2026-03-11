@@ -3,6 +3,16 @@
 All notable changes in this project will be documented in this file.
 
 
+## [1.1.2](https://github.com/omnixys/context/compare/v1.1.1...v1.1.2) (2026-03-11)
+
+### Other
+
+* **Other:** Merge branch 'main' of https://github.com/omnixys/context ([](https://github.com/omnixys/context/commit/88dd2d304fb41c97eeec69f8bc6481ab38963ea5))
+
+### Package.json
+
+* **Package.json:** update ([](https://github.com/omnixys/context/commit/b263c9eb55344bb0729b0e9bcf7baf4ab24c5ef6))
+
 ## [1.1.1](https://github.com/omnixys/context/compare/v1.1.0...v1.1.1) (2026-03-11)
 
 ### Ci
