@@ -3,6 +3,12 @@
 All notable changes in this project will be documented in this file.
 
 
+## [1.1.3](https://github.com/omnixys/context/compare/v1.1.2...v1.1.3) (2026-03-11)
+
+### Tsconfig
+
+* **Tsconfig:** Enable TypeScript decorators and metadata ([](https://github.com/omnixys/context/commit/75e0d0f8d08fedc685e08e0fc3f68944b2a3890d))
+
 ## [1.1.2](https://github.com/omnixys/context/compare/v1.1.1...v1.1.2) (2026-03-11)
 
 ### Other
