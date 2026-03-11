@@ -3,6 +3,12 @@
 All notable changes in this project will be documented in this file.
 
 
+## [1.0.1](https://github.com/omnixys/context/compare/v1.0.0...v1.0.1) (2026-03-11)
+
+### Publish
+
+* **Publish:** minor fix for publish ([](https://github.com/omnixys/context/commit/9669a4b0d8192a240cd53a60634c581396ebf009))
+
 ## 1.0.0 (2026-03-11)
 
 ### Init
