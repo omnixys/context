@@ -3,6 +3,12 @@
 All notable changes in this project will be documented in this file.
 
 
+## [1.1.5](https://github.com/omnixys/context/compare/v1.1.4...v1.1.5) (2026-03-12)
+
+### Type
+
+* **Type:** add AuthUser ([](https://github.com/omnixys/context/commit/da3ab77c0c0526f5671fa9732c754371191790ad))
+
 ## [1.1.4](https://github.com/omnixys/context/compare/v1.1.3...v1.1.4) (2026-03-12)
 
 ### Context
