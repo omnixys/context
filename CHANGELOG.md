@@ -3,6 +3,20 @@
 All notable changes in this project will be documented in this file.
 
 
+## [1.1.4](https://github.com/omnixys/context/compare/v1.1.3...v1.1.4) (2026-03-12)
+
+### Context
+
+* **Context:** add fastify cookie type augmentation and correct FastifyReply cookie utilities ([](https://github.com/omnixys/context/commit/61deb084dab933acd7db46c9f08bd39068f0cb29))
+
+### Other
+
+* **Other:** Merge branch 'main' of https://github.com/omnixys/context ([](https://github.com/omnixys/context/commit/c2c93a259e9d016a926e8fa089dac4445609949d))
+
+### Type
+
+* **Type:** update gqlFastifyContext ([](https://github.com/omnixys/context/commit/b31d1f8a4dce84e68d244b594c11f50ab6204e57))
+
 ## [1.1.3](https://github.com/omnixys/context/compare/v1.1.2...v1.1.3) (2026-03-11)
 
 ### Tsconfig
