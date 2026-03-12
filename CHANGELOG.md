@@ -3,6 +3,16 @@
 All notable changes in this project will be documented in this file.
 
 
+## [1.3.0](https://github.com/omnixys/context/compare/v1.2.1...v1.3.0) (2026-03-12)
+
+### Context
+
+* **Context:** support GraphQL Fastify replies for cookie helpers ([](https://github.com/omnixys/context/commit/b8432b6a0147a13f7349ae65540a84c671fb3e09))
+
+### Other
+
+* **Other:** Merge branch 'main' of https://github.com/omnixys/context ([](https://github.com/omnixys/context/commit/1156a3749b16bf38d6028bae64eb06682b4afbdf))
+
 ## [1.2.1](https://github.com/omnixys/context/compare/v1.2.0...v1.2.1) (2026-03-12)
 
 ### Function
