@@ -1,13 +1,11 @@
 import type { ExecutionContext } from '@nestjs/common'
-import type { FastifyReply, FastifyRequest } from 'fastify'
+import type { FastifyRequest } from 'fastify'
 import process from 'node:process'
 
 import { getRequest } from './get-request.util.js'
-import { getResponse } from './get-response.util.js'
 
 const isProd = process.env.NODE_ENV === 'production'
-const accessToken = 'access_token';
-const refreshToken = 'refresh_token';
+
 
 export function getCookies(context: ExecutionContext): FastifyRequest['cookies']  {
   const req = getRequest(context)
@@ -28,69 +26,3 @@ export const cookieOpts = (maxAgeMs?: number) => ({
   path: '/',
   maxAge: maxAgeMs,
 })
-
-/**
- * Safely sets a cookie on the response if available.
- *
- * @param res - Express response object.
- * @param name - The cookie name.
- * @param value - The cookie value.
- * @param opts - Additional cookie options.
- */
-export function setCookieSafe(
-  context: ExecutionContext,
-  name: string,
-  value: string,
-  maxAgeMs?: number,
-): void {
-  const reply = getResponse(context) as FastifyReply
-
-  if (!reply) return
-
-  reply.setCookie(name, value, cookieOpts(maxAgeMs))
-}
-
-/**
- * Safely clears a cookie from the response if available.
- *
- * @param res - Express response object.
- * @param name - The cookie name to remove.
- */
-export function clearCookieSafe(
-  context: ExecutionContext,
-  name: string,
-): void {
-  const reply = getResponse(context) as FastifyReply
-
-  if (!reply) return
-
-  reply.clearCookie(name, cookieOpts())
-}
-
-
-export function setTokens(  
-  context: ExecutionContext,
-  value: string,
-  maxAgeMs?: number,
-) {
-  setCookieSafe(
-      context,
-      accessToken,
-      value,
-      maxAgeMs,
-    );
-
-    setCookieSafe(
-      context,
-      refreshToken,
-      value,
-      maxAgeMs,
-    );
-}
-
-export function clearTokens(  
-  context: ExecutionContext,
-) {
-  clearCookieSafe(context, accessToken);
-  clearCookieSafe(context, refreshToken);
-}
