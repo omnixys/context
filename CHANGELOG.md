@@ -3,6 +3,17 @@
 All notable changes in this project will be documented in this file.
 
 
+## [1.4.0](https://github.com/omnixys/context/compare/v1.3.2...v1.4.0) (2026-03-12)
+
+### Context
+
+* **Context:** add device Decorator ([](https://github.com/omnixys/context/commit/26ee523f6ec829f1943c095d235d431d17bf59dd))
+* **Context:** add location Decorator ([](https://github.com/omnixys/context/commit/1abeceb59cb602a7d078acf04a5910f280025bd2))
+
+### Other
+
+* **Other:** Merge branch 'main' of https://github.com/omnixys/context ([](https://github.com/omnixys/context/commit/58cc34bd818a5ef1ff5b985a11c671a23b46fdd0))
+
 ## [1.3.2](https://github.com/omnixys/context/compare/v1.3.1...v1.3.2) (2026-03-12)
 
 ### Context
