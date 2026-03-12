@@ -1,4 +1,5 @@
 import 'fastify';
+import '@fastify/cookie'
 import type { KeycloakRawOutput } from '@omnixys/contracts';
 
 export interface AuthUser {
