@@ -13,7 +13,7 @@ export function getResponse(context: ExecutionContext): FastifyReply {
   if (type === 'graphql') {
     const gqlCtx = GqlExecutionContext.create(context)
     const ctx = gqlCtx.getContext<GqlFastifyContext>()
-    return ctx.res
+    return ctx.reply
   }
 
   throw new Error(`Unsupported context type: ${type}`)

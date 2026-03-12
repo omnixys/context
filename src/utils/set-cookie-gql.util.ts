@@ -33,7 +33,7 @@ export function gqlClearCookieSafe(
 }
 
 
-export function setTokens(  
+export function gqlSetTokens(  
   reply: FastifyReply,
   value: string,
   maxAgeMs?: number,
@@ -53,7 +53,7 @@ export function setTokens(
     );
 }
 
-export function clearTokens(  
+export function gqlClearTokens(  
   reply: FastifyReply,
 ) {
   gqlClearCookieSafe(reply, accessToken);
