@@ -3,6 +3,12 @@
 All notable changes in this project will be documented in this file.
 
 
+## [1.2.0](https://github.com/omnixys/context/compare/v1.1.6...v1.2.0) (2026-03-12)
+
+### Function
+
+* **Function:** add new function setTokens ([](https://github.com/omnixys/context/commit/e20b6177bc67c7318e166a65ed0093ea34ce5710))
+
 ## [1.1.6](https://github.com/omnixys/context/compare/v1.1.5...v1.1.6) (2026-03-12)
 
 ### Other
