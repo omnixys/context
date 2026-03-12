@@ -3,6 +3,16 @@
 All notable changes in this project will be documented in this file.
 
 
+## [1.3.1](https://github.com/omnixys/context/compare/v1.3.0...v1.3.1) (2026-03-12)
+
+### GqlType
+
+* **GqlType:** fix gql typing ([](https://github.com/omnixys/context/commit/017d3b6b13989404b05282db6e79e5e8e3a3cddd))
+
+### Other
+
+* **Other:** Merge branch 'main' of https://github.com/omnixys/context ([](https://github.com/omnixys/context/commit/d8991bea046d42fa1040e04a1770d8ccc2e635f2))
+
 ## [1.3.0](https://github.com/omnixys/context/compare/v1.2.1...v1.3.0) (2026-03-12)
 
 ### Context
