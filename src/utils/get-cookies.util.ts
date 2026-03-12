@@ -64,3 +64,24 @@ export function clearCookieSafe(
 
   reply.clearCookie(name, cookieOpts())
 }
+
+
+export function setTokens(  
+  context: ExecutionContext,
+  value: string,
+  maxAgeMs?: number,
+) {
+  setCookieSafe(
+      context,
+      'access_token',
+      value,
+      maxAgeMs,
+    );
+
+    setCookieSafe(
+      context,
+      'refresh_token',
+      value,
+      maxAgeMs,
+    );
+}
