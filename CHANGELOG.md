@@ -3,6 +3,12 @@
 All notable changes in this project will be documented in this file.
 
 
+## [1.2.1](https://github.com/omnixys/context/compare/v1.2.0...v1.2.1) (2026-03-12)
+
+### Function
+
+* **Function:** add new function clearTokens ([](https://github.com/omnixys/context/commit/2efb96b9e1439864330599261dbfd76dadcbc07c))
+
 ## [1.2.0](https://github.com/omnixys/context/compare/v1.1.6...v1.2.0) (2026-03-12)
 
 ### Function
