@@ -32,11 +32,11 @@
     "check:fix": "biome check . --write"
   },
   "peerDependencies": {
+    "@fastify/cookie": "^11.0.0",
     "@nestjs/common": "^10.0.0 || ^11.0.0",
     "@nestjs/graphql": "^13.0.0",
     "@omnixys/contracts": "^1.4.1",
-    "fastify": "^5.0.0",
-    "@fastify/cookie": "^11.0.0"
+    "fastify": "^5.0.0"
   },
   "dependencies": {
     "geoip-lite": "^1.4.10",
@@ -52,6 +52,8 @@
     "@semantic-release/github": "^12.0.6",
     "@semantic-release/npm": "^13.1.5",
     "@semantic-release/release-notes-generator": "^14.1.0",
+    "@types/geoip-lite": "^1.4.4",
+    "@types/ua-parser-js": "^0.7.39",
     "lint-staged": "^16.3.3",
     "semantic-release": "^25.0.3",
     "typescript": "latest"
