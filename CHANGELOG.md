@@ -3,6 +3,16 @@
 All notable changes in this project will be documented in this file.
 
 
+## [1.4.1](https://github.com/omnixys/context/compare/v1.4.0...v1.4.1) (2026-03-12)
+
+### Index
+
+* **Index:** add new decorators to index.ts ([](https://github.com/omnixys/context/commit/8894255a9f90dbcb491441c80c278e23e61fae23))
+
+### Other
+
+* **Other:** Merge branch 'main' of https://github.com/omnixys/context ([](https://github.com/omnixys/context/commit/4b5d64328fa810d2e3ff31718f6eac4c0508a7b5))
+
 ## [1.4.0](https://github.com/omnixys/context/compare/v1.3.2...v1.4.0) (2026-03-12)
 
 ### Context
