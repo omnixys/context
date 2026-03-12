@@ -3,6 +3,16 @@
 All notable changes in this project will be documented in this file.
 
 
+## [1.3.2](https://github.com/omnixys/context/compare/v1.3.1...v1.3.2) (2026-03-12)
+
+### Context
+
+* **Context:** update gqlContext ([](https://github.com/omnixys/context/commit/7a2eba1884aae4e18e9ebef4e7e2bac85b3f89a4))
+
+### Other
+
+* **Other:** Merge branch 'main' of https://github.com/omnixys/context ([](https://github.com/omnixys/context/commit/552a88ef9d41a4fecb9ab683b7e453d65a63a85f))
+
 ## [1.3.1](https://github.com/omnixys/context/compare/v1.3.0...v1.3.1) (2026-03-12)
 
 ### GqlType
