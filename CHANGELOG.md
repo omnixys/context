@@ -3,6 +3,16 @@
 All notable changes in this project will be documented in this file.
 
 
+## [1.1.6](https://github.com/omnixys/context/compare/v1.1.5...v1.1.6) (2026-03-12)
+
+### Other
+
+* **Other:** Merge branch 'main' of https://github.com/omnixys/context ([](https://github.com/omnixys/context/commit/1d96b21a51654f747d02aa0c8df48d1bb8345a2d))
+
+### Type
+
+* **Type:** update auth-user.type.ts ([](https://github.com/omnixys/context/commit/17787c3786443cefd557c0c4b1686acb67750a88))
+
 ## [1.1.5](https://github.com/omnixys/context/compare/v1.1.4...v1.1.5) (2026-03-12)
 
 ### Type
