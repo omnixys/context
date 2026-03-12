@@ -6,6 +6,8 @@ import { getRequest } from './get-request.util.js'
 import { getResponse } from './get-response.util.js'
 
 const isProd = process.env.NODE_ENV === 'production'
+const accessToken = 'access_token';
+const refreshToken = 'refresh_token';
 
 export function getCookies(context: ExecutionContext): FastifyRequest['cookies']  {
   const req = getRequest(context)
@@ -73,15 +75,22 @@ export function setTokens(
 ) {
   setCookieSafe(
       context,
-      'access_token',
+      accessToken,
       value,
       maxAgeMs,
     );
 
     setCookieSafe(
       context,
-      'refresh_token',
+      refreshToken,
       value,
       maxAgeMs,
     );
+}
+
+export function clearTokens(  
+  context: ExecutionContext,
+) {
+  clearCookieSafe(context, accessToken);
+  clearCookieSafe(context, refreshToken);
 }
