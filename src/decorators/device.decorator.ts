@@ -5,7 +5,16 @@ import { getHeaders } from '../utils/get-headers.util.js';
 export const Device = createParamDecorator(
   (_data: unknown, context: ExecutionContext): string | undefined => {
     const headers = getHeaders(context);
-     const userAgent = headers['user-agent'];
+
+        const uaHeader =
+      headers['x-client-user-agent'] ??
+      headers['x-forwarded-user-agent'] ??
+      headers['user-agent']
+
+          const userAgent =
+      Array.isArray(uaHeader) ? uaHeader[0] : uaHeader
+    
+
     return extractDevice(userAgent);
   },
 )

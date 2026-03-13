@@ -7,11 +7,28 @@ export function extractDevice(userAgent?: string) {
     return 'Postman client';
   }
 
-  const parser = new UAParser(userAgent);
+    if (userAgent.includes('minipass-fetch')) {
+    return 'Internal service';
+  }
 
-  const browser = parser.getBrowser().name ?? 'Unknown browser';
-  const os = parser.getOS().name ?? 'Unknown OS';
+  const parser = new UAParser(userAgent)
 
-  return `${browser} on ${os}`;
+  const browser = parser.getBrowser().name
+  const os = parser.getOS().name
+  const device = parser.getDevice().model
+  const type = parser.getDevice().type
+
+  if (device) {
+    return `${device} (${browser ?? 'Unknown browser'} on ${os ?? 'Unknown OS'})`
+  }
+
+  if (type === 'mobile') {
+    return `Mobile (${browser ?? 'Unknown browser'} on ${os ?? 'Unknown OS'})`
+  }
+
+  if (type === 'tablet') {
+    return `Tablet (${browser ?? 'Unknown browser'} on ${os ?? 'Unknown OS'})`
+  }
+
+  return `${browser ?? 'Unknown browser'} on ${os ?? 'Unknown OS'}`
 }
-
