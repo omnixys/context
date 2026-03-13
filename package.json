@@ -35,7 +35,7 @@
     "@fastify/cookie": "^11.0.0",
     "@nestjs/common": "^10.0.0 || ^11.0.0",
     "@nestjs/graphql": "^13.0.0",
-    "@omnixys/contracts": "^1.4.1",
+    "@omnixys/contracts": "^1.5.1",
     "fastify": "^5.0.0"
   },
   "dependencies": {
