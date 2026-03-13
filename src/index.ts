@@ -1,3 +1,4 @@
+export * from './decorators/client-info.decorator.js'
 export * from './decorators/cookies.decorator.js'
 export * from './decorators/device.decorator.js'
 export * from './decorators/headers.decorator.js'
