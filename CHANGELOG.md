@@ -3,6 +3,16 @@
 All notable changes in this project will be documented in this file.
 
 
+## [1.5.0](https://github.com/omnixys/context/compare/v1.4.2...v1.5.0) (2026-03-13)
+
+### Client
+
+* **Client:** add @ClientInfo decorator for device, browser, os and ip extraction ([](https://github.com/omnixys/context/commit/eaad42d94a6351c6ccda0c2fdfbeaa8eaa009ee9))
+
+### Device
+
+* **Device:** improve device detection and support forwarded user-agent header ([](https://github.com/omnixys/context/commit/b2ab016b5ef57633786309b1dde23d993d17d177))
+
 ## [1.4.2](https://github.com/omnixys/context/compare/v1.4.1...v1.4.2) (2026-03-13)
 
 ### Update
