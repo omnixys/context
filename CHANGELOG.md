@@ -3,6 +3,12 @@
 All notable changes in this project will be documented in this file.
 
 
+## [1.4.2](https://github.com/omnixys/context/compare/v1.4.1...v1.4.2) (2026-03-13)
+
+### Update
+
+* **Update:** update package ([](https://github.com/omnixys/context/commit/7854be2c1e72dd41934b83ad7c84d890cee24422))
+
 ## [1.4.1](https://github.com/omnixys/context/compare/v1.4.0...v1.4.1) (2026-03-12)
 
 ### Index
