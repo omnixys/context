@@ -15,6 +15,7 @@ export * from './utils/get-headers.util.js'
 export * from './utils/get-ip.util.js'
 export * from './utils/get-request.util.js'
 export * from './utils/get-response.util.js'
+export * from './utils/parse-client-info.util.js'
 export * from './utils/get-locale.util.js'
 export * from './utils/set-cookie-gql.util.js'
 

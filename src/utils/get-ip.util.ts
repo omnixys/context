@@ -4,7 +4,8 @@ import { getRequest } from './get-request.util.js'
 export function getIp(context: ExecutionContext): string | undefined {
   const req = getRequest(context)
 
-  const forwarded = req.headers['x-forwarded-for']
+  const forwarded = req.headers['x-forwarded-for'] ??
+      req.headers['x-real-ip'];
 
 if (typeof forwarded === 'string') {
   return forwarded.split(',')[0].trim()
