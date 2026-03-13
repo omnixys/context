@@ -3,6 +3,12 @@
 All notable changes in this project will be documented in this file.
 
 
+## [1.5.1](https://github.com/omnixys/context/compare/v1.5.0...v1.5.1) (2026-03-13)
+
+### Index
+
+* **Index:** add export * from './decorators/client-info.decorator.js' ([](https://github.com/omnixys/context/commit/02257cc503f1b64692a61b13b9cbe9c6c778dcb4))
+
 ## [1.5.0](https://github.com/omnixys/context/compare/v1.4.2...v1.5.0) (2026-03-13)
 
 ### Client
