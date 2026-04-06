@@ -1,15 +1,16 @@
-import type { ExecutionContext } from '@nestjs/common'
-import type { FastifyRequest } from 'fastify'
-import process from 'node:process'
+import type { ExecutionContext } from '@nestjs/common';
+import type { FastifyRequest } from 'fastify';
+import process from 'node:process';
 
-import { getRequest } from './get-request.util.js'
+import { getRequest } from './get-request.util.js';
 
-const isProd = process.env.NODE_ENV === 'production'
+const isProd = process.env.NODE_ENV === 'production';
 
-
-export function getCookies(context: ExecutionContext): FastifyRequest['cookies']  {
-  const req = getRequest(context)
-  return req.cookies ?? {}
+export function getCookies(
+  context: ExecutionContext,
+): FastifyRequest['cookies'] {
+  const req = getRequest(context);
+  return req.cookies ?? {};
 }
 
 /**
@@ -21,8 +22,8 @@ export function getCookies(context: ExecutionContext): FastifyRequest['cookies']
 export const cookieOpts = (maxAgeMs?: number) => ({
   httpOnly: true,
   secure: isProd,
-  sameSite: isProd ? 'none' : 'lax' as CookieSameSite,
+  sameSite: isProd ? 'none' : ('lax' as CookieSameSite),
   domain: isProd ? '.omnixys.com' : undefined,
   path: '/',
   maxAge: maxAgeMs,
-})
+});

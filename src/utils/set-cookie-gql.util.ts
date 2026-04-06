@@ -1,6 +1,6 @@
-import type { FastifyReply } from "fastify"
-import { cookieOpts } from "./get-cookies.util.js"
-import { accessToken, refreshToken } from "../const/cookie.const.js"
+import { accessToken, refreshToken } from '../const/cookie.const.js';
+import { cookieOpts } from './get-cookies.util.js';
+import type { FastifyReply } from 'fastify';
 
 /**
  * Safely sets a cookie on the response if available.
@@ -16,7 +16,7 @@ export function gqlSetCookieSafe(
   value: string,
   maxAgeMs?: number,
 ): void {
-  reply.setCookie(name, value, cookieOpts(maxAgeMs))
+  reply.setCookie(name, value, cookieOpts(maxAgeMs));
 }
 
 /**
@@ -25,37 +25,21 @@ export function gqlSetCookieSafe(
  * @param res - Express response object.
  * @param name - The cookie name to remove.
  */
-export function gqlClearCookieSafe(
-  reply: FastifyReply,
-  name: string,
-): void {
-  reply.clearCookie(name, cookieOpts())
+export function gqlClearCookieSafe(reply: FastifyReply, name: string): void {
+  reply.clearCookie(name, cookieOpts());
 }
 
-
-export function gqlSetTokens(  
+export function gqlSetTokens(
   reply: FastifyReply,
   value: string,
   maxAgeMs?: number,
 ) {
-  gqlSetCookieSafe(
-      reply,
-      accessToken,
-      value,
-      maxAgeMs,
-    );
+  gqlSetCookieSafe(reply, accessToken, value, maxAgeMs);
 
-    gqlSetCookieSafe(
-      reply,
-      refreshToken,
-      value,
-      maxAgeMs,
-    );
+  gqlSetCookieSafe(reply, refreshToken, value, maxAgeMs);
 }
 
-export function gqlClearTokens(  
-  reply: FastifyReply,
-) {
+export function gqlClearTokens(reply: FastifyReply) {
   gqlClearCookieSafe(reply, accessToken);
   gqlClearCookieSafe(reply, refreshToken);
 }

@@ -1,24 +1,39 @@
-import type { ExecutionContext } from '@nestjs/common'
-import { getRequest } from './get-request.util.js'
+import { getRequest } from './get-request.util.js';
+import { normalizeIp } from './normalize-ip.util.js';
+import type { ExecutionContext } from '@nestjs/common';
 
 export function getIp(context: ExecutionContext): string | undefined {
-  const req = getRequest(context)
+  const req = getRequest(context);
 
-  const forwarded = req.headers['x-forwarded-for'] ??
-      req.headers['x-real-ip'];
+  // 1️⃣ Cloudflare (höchste Priorität)
+  const cfIp = req.headers['cf-connecting-ip'];
+  if (typeof cfIp === 'string' && cfIp.length > 0) {
+    return normalizeIp(cfIp);
+  }
 
-if (typeof forwarded === 'string') {
-  return forwarded.split(',')[0].trim()
-}
+  // 2️⃣ X-Forwarded-For (first client IP)
+  const xForwardedFor = req.headers['x-forwarded-for'];
+  if (typeof xForwardedFor === 'string') {
+    const ip = xForwardedFor.split(',')[0]?.trim();
+    if (ip) return normalizeIp(ip);
+  }
 
-if (Array.isArray(forwarded)) {
-  return forwarded[0]
-}
+  if (Array.isArray(xForwardedFor) && xForwardedFor.length > 0) {
+    return normalizeIp(xForwardedFor[0]);
+  }
 
-  return (
-    req.headers['cf-connecting-ip']?.toString() ||
-    req.headers['x-forwarded-for']?.toString().split(',')[0] ||
+  // 3️⃣ X-Real-IP
+  const realIp = req.headers['x-real-ip'];
+  if (typeof realIp === 'string' && realIp.length > 0) {
+    return normalizeIp(realIp);
+  }
+
+  // 4️⃣ Fallbacks
+  const fallback =
     req.ip ||
-    req.socket?.remoteAddress
-  )
+    req.socket?.remoteAddress ||
+    'unknown';
+
+  return normalizeIp(fallback);
 }
+

@@ -1,14 +1,12 @@
-import type { ClientInfo } from '@omnixys/contracts'
-import { UAParser } from 'ua-parser-js'
+import type { ClientContext } from '@omnixys/shared';
+import { UAParser } from 'ua-parser-js';
 
 export function parseClientInfo(
   locale: string,
   location: string,
   userAgent?: string,
   ip?: string,
-
-): ClientInfo {
-
+): ClientContext {
   if (!userAgent) {
     return {
       ip,
@@ -17,8 +15,8 @@ export function parseClientInfo(
       browser: 'Unknown browser',
       os: 'Unknown OS',
       locale,
-      location
-    }
+      location,
+    };
   }
 
   if (userAgent.includes('PostmanRuntime')) {
@@ -28,9 +26,9 @@ export function parseClientInfo(
       device: 'Postman client',
       browser: 'Postman',
       os: 'Unknown OS',
-            locale,
-      location
-    }
+      locale,
+      location,
+    };
   }
 
   if (userAgent.includes('minipass-fetch')) {
@@ -40,16 +38,16 @@ export function parseClientInfo(
       device: 'Internal service',
       browser: 'Node.js',
       os: 'Server',
-            locale,
-      location
-    }
+      locale,
+      location,
+    };
   }
 
-  const parser = new UAParser(userAgent)
+  const parser = new UAParser(userAgent);
 
-  const browser = parser.getBrowser().name ?? 'Unknown browser'
-  const os = parser.getOS().name ?? 'Unknown OS'
-  const device = parser.getDevice().model ?? `${browser} on ${os}`
+  const browser = parser.getBrowser().name ?? 'Unknown browser';
+  const os = parser.getOS().name ?? 'Unknown OS';
+  const device = parser.getDevice().model ?? `${browser} on ${os}`;
 
   return {
     ip,
@@ -57,7 +55,7 @@ export function parseClientInfo(
     device,
     browser,
     os,
-      locale,
-      location
-  }
+    locale,
+    location,
+  };
 }

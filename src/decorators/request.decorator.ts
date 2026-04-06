@@ -1,8 +1,8 @@
-import { createParamDecorator, type ExecutionContext } from '@nestjs/common'
-import { getRequest } from '../utils/get-request.util.js'
+import { getRequest } from '../utils/get-request.util.js';
+import { createParamDecorator, type ExecutionContext } from '@nestjs/common';
 
 export const Req = createParamDecorator(
   (_data: unknown, context: ExecutionContext) => {
-    return getRequest(context)
+    return getRequest(context);
   },
-)
+);

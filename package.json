@@ -5,6 +5,7 @@
   "license": "GPL-3.0-or-later",
   "type": "module",
   "main": "./dist/index.js",
+  "packageManager": "pnpm@9.12.0",
   "types": "./dist/index.d.ts",
   "engines": {
     "node": ">=20"
@@ -22,21 +23,19 @@
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
+    "format": "prettier --cache --write \"src/**/*.{ts,js,json,prisma,md,yaml}\"",
     "clean": "rimraf dist",
     "dev": "tsc -w",
-    "release": "semantic-release",
-    "lint": "biome lint",
-    "format": "biome format --write",
-    "lint:fix": "biome lint . --write",
-    "check": "biome check .",
-    "check:fix": "biome check . --write"
+    "release": "semantic-release"
   },
   "peerDependencies": {
     "@fastify/cookie": "^11.0.0",
     "@nestjs/common": "^10.0.0 || ^11.0.0",
-    "@nestjs/graphql": "^13.0.0",
-    "@omnixys/contracts": "^1.5.1",
-    "fastify": "^5.0.0"
+    "@nestjs/graphql": "^13.2.4",
+    "@omnixys/shared": "file:../shared",
+    "fastify": "^5.8.4",
+    "graphql": "^16.13.2",
+    "rxjs": "^7.8.2"
   },
   "dependencies": {
     "geoip-lite": "^1.4.10",
@@ -46,6 +45,7 @@
     "@biomejs/biome": "^2.4.6",
     "@commitlint/cli": "^20.4.3",
     "@commitlint/config-conventional": "^20.4.3",
+    "@nestjs/graphql": "^13.2.4",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.1",
     "@semantic-release/git": "^10.0.1",
@@ -54,7 +54,13 @@
     "@semantic-release/release-notes-generator": "^14.1.0",
     "@types/geoip-lite": "^1.4.4",
     "@types/ua-parser-js": "^0.7.39",
+    "fastify": "^5.8.4",
+    "graphql": "^16.13.2",
     "lint-staged": "^16.3.3",
+    "prettier": "^3.8.1",
+    "prettier-plugin-organize-imports": "^4.3.0",
+    "prettier-plugin-sort-imports": "^1.8.11",
+    "rxjs": "^7.8.2",
     "semantic-release": "^25.0.3",
     "typescript": "latest"
   }

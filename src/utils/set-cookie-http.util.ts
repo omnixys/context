@@ -1,8 +1,7 @@
-import type { ExecutionContext } from "@nestjs/common"
-import { getResponse } from "./get-response.util.js"
-import { cookieOpts } from "./get-cookies.util.js"
-import { accessToken, refreshToken } from "../const/cookie.const.js"
-
+import { accessToken, refreshToken } from '../const/cookie.const.js';
+import { cookieOpts } from './get-cookies.util.js';
+import { getResponse } from './get-response.util.js';
+import type { ExecutionContext } from '@nestjs/common';
 
 /**
  * Safely sets a cookie on the response if available.
@@ -18,11 +17,11 @@ export function httpSetCookieSafe(
   value: string,
   maxAgeMs?: number,
 ): void {
-  const reply = getResponse(context)
+  const reply = getResponse(context);
 
-  if (!reply) return
+  if (!reply) return;
 
-  reply.setCookie(name, value, cookieOpts(maxAgeMs))
+  reply.setCookie(name, value, cookieOpts(maxAgeMs));
 }
 
 /**
@@ -35,37 +34,24 @@ export function httpClearCookieSafe(
   context: ExecutionContext,
   name: string,
 ): void {
-  const reply = getResponse(context)
+  const reply = getResponse(context);
 
-  if (!reply) return
+  if (!reply) return;
 
-  reply.clearCookie(name, cookieOpts())
+  reply.clearCookie(name, cookieOpts());
 }
 
-
-export function httpSetTokens(  
+export function httpSetTokens(
   context: ExecutionContext,
   value: string,
   maxAgeMs?: number,
 ) {
-  httpSetCookieSafe(
-      context,
-      accessToken,
-      value,
-      maxAgeMs,
-    );
+  httpSetCookieSafe(context, accessToken, value, maxAgeMs);
 
-    httpSetCookieSafe(
-      context,
-      refreshToken,
-      value,
-      maxAgeMs,
-    );
+  httpSetCookieSafe(context, refreshToken, value, maxAgeMs);
 }
 
-export function httpClearTokens(  
-  context: ExecutionContext,
-) {
+export function httpClearTokens(context: ExecutionContext) {
   httpClearCookieSafe(context, accessToken);
   httpClearCookieSafe(context, refreshToken);
 }
