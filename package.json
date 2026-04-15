@@ -1,11 +1,11 @@
 {
   "name": "@omnixys/context",
-  "version": "1.5.1",
+  "version": "0.1.0",
   "description": "Shared request context utilities and decorators for Omnixys NestJS microservices.",
   "license": "GPL-3.0-or-later",
   "type": "module",
   "main": "./dist/index.js",
-  "packageManager": "pnpm@9.12.0",
+  "packageManager": "pnpm@10.33.0",
   "types": "./dist/index.d.ts",
   "engines": {
     "node": ">=20"
@@ -32,7 +32,6 @@
     "@fastify/cookie": "^11.0.0",
     "@nestjs/common": "^10.0.0 || ^11.0.0",
     "@nestjs/graphql": "^13.2.4",
-    "@omnixys/shared": "file:../shared",
     "fastify": "^5.8.4",
     "graphql": "^16.13.2",
     "rxjs": "^7.8.2"

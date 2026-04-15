@@ -29,11 +29,7 @@ export function getIp(context: ExecutionContext): string | undefined {
   }
 
   // 4️⃣ Fallbacks
-  const fallback =
-    req.ip ||
-    req.socket?.remoteAddress ||
-    'unknown';
+  const fallback = req.ip || req.socket?.remoteAddress || 'unknown';
 
   return normalizeIp(fallback);
 }
-

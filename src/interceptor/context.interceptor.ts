@@ -36,7 +36,6 @@ function extractTenantFromHost(host?: string): string | undefined {
   return undefined;
 }
 
-
 @Injectable()
 export class ContextInterceptor implements NestInterceptor {
   intercept(context: ExecutionContext, next: CallHandler): Observable<unknown> {
@@ -84,16 +83,17 @@ export class ContextInterceptor implements NestInterceptor {
           ? headers['x-tenant-id'][0]
           : undefined;
 
-const rawHost = Array.isArray(headers['host'])
-  ? headers['host'][0]
-  : headers['host'];
+    const rawHost = Array.isArray(headers['host'])
+      ? headers['host'][0]
+      : headers['host'];
 
-const domainTenant =
-  typeof rawHost === 'string' ? extractTenantFromHost(rawHost) : undefined;
+    const domainTenant =
+      typeof rawHost === 'string' ? extractTenantFromHost(rawHost) : undefined;
     const userTenant = user?.tenantId;
 
     // FINAL tenant
-    const tenantId = keycloakTenant ?? headerTenant ?? domainTenant ?? userTenant;
+    const tenantId =
+      keycloakTenant ?? headerTenant ?? domainTenant ?? userTenant;
 
     // ─────────────────────────────────────────────
     // CONTEXT
