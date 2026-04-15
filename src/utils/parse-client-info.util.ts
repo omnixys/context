@@ -1,8 +1,8 @@
-import type { ClientContext } from '@omnixys/shared';
+import type { ClientContext, Locale } from '@omnixys/shared';
 import { UAParser } from 'ua-parser-js';
 
 export function parseClientInfo(
-  locale: string,
+  locale: Locale,
   location: string,
   userAgent?: string,
   ip?: string,

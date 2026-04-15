@@ -1,18 +1,18 @@
+import { Locale } from '@omnixys/shared';
 import { getRequest } from './get-request.util.js';
 import type { ExecutionContext } from '@nestjs/common';
 
-export function getLocale(context: ExecutionContext): string {
+export function getLocale(context: ExecutionContext): Locale {
   const req = getRequest(context);
 
   const header = req.headers['accept-language'];
 
   if (typeof header === 'string') {
-    return header.split(',')[0];
+    return header.split(',')[0] as Locale;
   }
-
-  return (
-    req.cookies?.locale ??
+  const payload = (req.cookies?.locale ??
     req.headers['accept-language']?.toString().split(',')[0] ??
-    'en-US'
-  );
+    'en-US') as Locale
+
+  return payload;
 }
